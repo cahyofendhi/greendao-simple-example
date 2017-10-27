@@ -1,16 +1,21 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion project.targetApiLevel.toInteger()
+    buildToolsVersion project.androidBuildToolsVersion
+
     defaultConfig {
-        applicationId "com.bcr.greendaosimpleexample"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId project.applicationIdName
+        minSdkVersion project.minApiLevel
+        targetSdkVersion project.targetApiLevel
+        versionCode project.versionCodeNumber.toInteger()
+        versionName project.versionNameVersion
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,5 +31,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    // database
+    compile "org.greenrobot:greendao:$project.greendaoPluginVersion"
+    compile "net.zetetic:android-database-sqlcipher:$project.encryptionPluginVersion"
     testCompile 'junit:junit:4.12'
 }
