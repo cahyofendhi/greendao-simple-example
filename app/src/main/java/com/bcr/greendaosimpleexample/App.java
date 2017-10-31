@@ -9,7 +9,7 @@ import com.bcr.greendaosimpleexample.data.DaoSession;
 import org.greenrobot.greendao.database.Database;
 
 /**
- * Created by dot on 10/27/17.
+ * Created by bcr on 10/27/17.
  */
 
 public class App extends Application {

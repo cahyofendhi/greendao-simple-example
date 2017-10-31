@@ -9,7 +9,7 @@ import java.util.Date;
 import org.greenrobot.greendao.annotation.Generated;
 
 /**
- * Created by dot on 10/31/17.
+ * Created by bcr on 10/31/17.
  */
 
 @Entity(indexes = {

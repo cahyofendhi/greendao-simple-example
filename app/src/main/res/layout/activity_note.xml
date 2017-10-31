@@ -29,13 +29,44 @@
             android:textSize="14sp"
             android:layout_marginTop="20dp"/>
 
-        <!--save button-->
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="save"
-            android:layout_gravity="center_horizontal"/>
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--save button-->
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:layout_weight="1"/>
+
+            <!--display button-->
+            <Button
+                android:id="@+id/btn_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="display data"
+                android:layout_weight="1"/>
+
+            <!--search button-->
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="search"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <!--result-->
+        <TextView
+            android:id="@+id/txv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 
